@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 17:27:28 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/04 07:20:05 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/04 07:28:46 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,11 @@ char	*ft_getline(char *rest);
 
 // ------------------Utils Function---------------------
 void	*ft_calloc(size_t count, size_t size);
-char	*ft_strdup(const char *s1);
+char	*ft_strdup2(const char *s1);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
-size_t	ft_strlen(const char *s);
-char	*ft_strjoin(char const *s1, char const *s2);
+size_t	ft_strlen2(const char *s);
+char	*ft_strjoin2(char const *s1, char const *s2);
 char	**ft_split(char const *s, char c);
 // ------------------Utils Function---------------------
 
