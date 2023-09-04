@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strdup2.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 17:04:00 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/04 07:20:47 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/04 07:47:45 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strdup2(const char *s1)
 {
 	int		i;
 	size_t	y;
 	char	*ptr;
 
 	i = 0;
-	y = ft_strlen(s1);
+	y = ft_strlen2(s1);
 	ptr = malloc((y + 1) * sizeof(char));
 	if (!ptr)
 		return (NULL);

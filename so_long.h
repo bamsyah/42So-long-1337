@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 17:27:28 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/04 07:28:46 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/04 07:45:51 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen2(const char *s);
 char	*ft_strjoin2(char const *s1, char const *s2);
 char	**ft_split(char const *s, char c);
+void	ft_bzero(void *s, size_t n);
 // ------------------Utils Function---------------------
 
 #endif

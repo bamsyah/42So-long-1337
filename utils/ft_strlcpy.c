@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 11:31:00 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/04 07:20:29 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/04 07:48:57 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	int		len;
 	size_t	i;
 
-	len = ft_strlen(src);
+	len = ft_strlen2(src);
 	i = 0;
 	if (dstsize == 0)
 		return (len);

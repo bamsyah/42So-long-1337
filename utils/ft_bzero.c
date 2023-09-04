@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.c                                          :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/31 17:27:43 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/04 07:53:01 by bamsyah          ###   ########.fr       */
+/*   Created: 2022/10/19 16:31:46 by bamsyah           #+#    #+#             */
+/*   Updated: 2023/09/04 07:45:42 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "libft.h"
 
-int	main(int ac, char **av)
+void	ft_bzero(void *s, size_t n)
 {
-	av[1] = "a";
-	if (ac != 2)
+	size_t	i;
+	char	*str;
+
+	i = 0;
+	str = s;
+	while (i < n)
 	{
-		printf("Error of reading Map\n");
-		return (0);
+		str[i] = '\0';
+		i++;
 	}
-	return (0);
 }
