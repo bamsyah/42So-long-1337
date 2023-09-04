@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 17:27:28 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/04 07:45:51 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/04 10:31:21 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # include <limits.h>
 # include <stdint.h>
 
-typedef struct so_long
+typedef struct map
 {
 	char	**map;
 	int		coines;
@@ -31,7 +31,7 @@ typedef struct so_long
 	int		y_exit;
 	int		map_width;
 	int		map_height;
-}t_test;
+}t_map;
 
 // -------------------Printf Function-------------------
 int		ft_putchar_len(char c);
@@ -68,4 +68,8 @@ char	**ft_split(char const *s, char c);
 void	ft_bzero(void *s, size_t n);
 // ------------------Utils Function---------------------
 
+// --------------------Check map------------------------
+void	check_name(char *map);
+char	check_newline(char *split);
+// --------------------Check map------------------------
 #endif
