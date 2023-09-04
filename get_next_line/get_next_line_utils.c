@@ -6,11 +6,11 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 16:11:25 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/07/19 23:00:11 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/04 06:43:00 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../so_long.h"
 
 int	ft_strchr(char *rest)
 {

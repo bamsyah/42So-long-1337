@@ -6,11 +6,11 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 17:20:29 by bamsyah           #+#    #+#             */
-/*   Updated: 2022/11/13 06:34:40 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/04 07:18:59 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../so_long.h"
 
 static int	word_count(const char *s, char c)
 {

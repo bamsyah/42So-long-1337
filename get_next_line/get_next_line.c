@@ -6,11 +6,11 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 16:14:14 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/07/19 23:33:43 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/04 06:43:18 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../so_long.h"
 
 char	*read_file(int fd, char *rest)
 {

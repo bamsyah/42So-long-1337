@@ -6,11 +6,11 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 17:04:00 by bamsyah           #+#    #+#             */
-/*   Updated: 2022/11/13 06:34:29 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/04 07:20:47 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../so_long.h"
 
 char	*ft_strdup(const char *s1)
 {

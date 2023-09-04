@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_len.c                                    :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/14 14:27:02 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/03/17 15:58:47 by bamsyah          ###   ########.fr       */
+/*   Created: 2022/10/17 13:07:54 by bamsyah           #+#    #+#             */
+/*   Updated: 2023/09/04 07:20:39 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../so_long.h"
 
-int	ft_putstr_len(char *str)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	int	i;
+	size_t	i;
+	size_t	dstlen;
+	size_t	srclen;
 
 	i = 0;
-	if (!str)
+	if (!dst && dstsize == 0)
+		return (ft_strlen(src));
+	dstlen = ft_strlen(dst);
+	srclen = ft_strlen(src);
+	if (dstsize < dstlen + 1)
+		return (dstsize + srclen);
+	while (i < dstsize - dstlen - 1 && src[i])
 	{
-		write(1, "(null)", 6);
-		return (6);
-	}
-	while (str[i])
-	{
-		write(1, &str[i], 1);
+		dst[dstlen + i] = src[i];
 		i++;
 	}
-	return (i);
+	dst[dstlen + i] = '\0';
+	return (srclen + dstlen);
 }

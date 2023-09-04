@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_len.c                                   :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/14 14:26:57 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/03/17 15:40:34 by bamsyah          ###   ########.fr       */
+/*   Created: 2022/10/17 11:31:00 by bamsyah           #+#    #+#             */
+/*   Updated: 2023/09/04 07:20:29 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../so_long.h"
 
-int	ft_putchar_len(char c)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	write(1, &c, 1);
-	return (1);
+	int		len;
+	size_t	i;
+
+	len = ft_strlen(src);
+	i = 0;
+	if (dstsize == 0)
+		return (len);
+	while (src[i] && i < (dstsize - 1))
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (len);
 }
