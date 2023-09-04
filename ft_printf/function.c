@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 06:23:00 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/04 07:51:35 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/04 07:58:31 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ void	ft_putbase(unsigned long i, char *s, int *len)
 
 void	ft_putunbr_len(unsigned int nbr, int *len)
 {
-	if (nbr >= 0 && nbr <= 9)
-		*len += ft_putchar_len(nbr + 48);
-	else
+	if (nbr <= 0 && nbr >= 9)
 	{
 		ft_putnbr_len(nbr / 10, len);
 		ft_putnbr_len(nbr % 10, len);
 	}
+	else
+		*len += ft_putchar_len(nbr + 48);
 }
 
 int	ft_putstr_len(char *str)

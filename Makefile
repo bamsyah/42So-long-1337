@@ -6,12 +6,12 @@
 #    By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/31 17:38:36 by bamsyah           #+#    #+#              #
-#    Updated: 2023/09/04 07:53:37 by bamsyah          ###   ########.fr        #
+#    Updated: 2023/09/04 07:57:27 by bamsyah          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = so_long
-CC = clang
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 SRC = ft_printf/function.c ft_printf/ft_printf.c  \
@@ -21,10 +21,9 @@ SRC = ft_printf/function.c ft_printf/ft_printf.c  \
 
 OBJ = $(SRC:.c=.o)
 
-all: $(NAME)
+NAME: $(OBJ)
 
-$(NAME):$(OBJ)
-	$(CC) $(CFLAGS)
+all: $(NAME)
 
 clean:
 	rm -rf $(OBJ)
@@ -32,5 +31,4 @@ clean:
 fclean: clean
 	rm -rf $(NAME)
 	
-re:
-	fclean all
+re: fclean all
