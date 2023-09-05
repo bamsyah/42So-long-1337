@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checking_map.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
+/*   By: badreddinemsyah <badreddinemsyah@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 10:19:30 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/05 21:31:44 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/06 00:58:45 by badreddinem      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,19 +46,19 @@ void	check_newline(char *split)
 	}
 }
 
-void	check_components(char **wall)
+void	check_components(char **components)
 {
 	int	i;
 	int	j;
 
 	i = 0;
-	while (wall[i])
+	while (components[i])
 	{
 		j = 0;
-		while (wall[i][j])
+		while (components[i][j])
 		{
-			if ((wall[i][j] != '1') && (wall[i][j] != 'E') && (wall[i][j] != 'P') 
-			&& (wall[i][j] != 'C') && (wall[i][j] != '0'))
+			if ((components[i][j] != '1') && (components[i][j] != 'E') && (components[i][j] != 'P') 
+			&& (components[i][j] != 'C') && (components[i][j] != '0'))
 			{
 				ft_printf("Error\nInvalid map");
 				exit (0);
@@ -69,7 +69,7 @@ void	check_components(char **wall)
 	}
 }
 
-void	check_rectangular(**map)
+void	check_rectangular(char **map)
 {
 	int	len;
 	int	i;

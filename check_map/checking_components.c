@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checking_components.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
+/*   By: badreddinemsyah <badreddinemsyah@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 21:03:47 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/05 22:33:09 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/06 00:58:45 by badreddinem      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	one_player(char *player)
 {
     int i;
-    int j;
+    int y;
     
     i = 0;
     while (player[i])
@@ -40,7 +40,7 @@ void	one_player(char *player)
 void	one_exit(char *player)
 {
     int i;
-    int j;
+    int y;
     
     i = 0;
     while (player[i])
@@ -62,28 +62,24 @@ void	one_exit(char *player)
     }
 }
 
-int	collectible(char *player)
+void	collectible(char *player)
 {
     int i;
-    int j;
+    int exist;
     
     i = 0;
+    exist = -1;
     while (player[i])
     {
         if (player[i] == 'C')
         {
-            y = i;
-            while (player[y])
-            {
-                if (player[y] == 'C')
-                {
-                    return (1);
-                }
-                y++;
-            }  
+            exist = 1;
         }
         i++;
     }
-	ft_printf("Error\nyou need more collectible");
-    exit (0);
+    if (exist == -1)
+    {
+        ft_printf("Error\nyou need more collectible");
+        exit (0);
+    }
 }

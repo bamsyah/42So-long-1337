@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   check_wall.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
+/*   By: badreddinemsyah <badreddinemsyah@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 21:31:07 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/05 21:52:13 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/06 00:58:45 by badreddinem      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-void    check_wall(**map)
+void    check_wall(char **map)
 {
     int i;
 	int	j;
@@ -23,28 +23,23 @@ void    check_wall(**map)
 		j++;
     while (map[i])
     {
-        if (check(map[0][i]))
+        if (check(map[0][i]) || check(map[j][i]))
         {
 			ft_printf("Error\nInvalid map");
 			exit (0);
         }
-        if (check(map[j]))
-		{
-			ft_printf("Error\nInvalid map");
-			exit(0);
-		}
 		i++;
     }
 }
 
-void    left_right(**map)
+void    left_right(char **map)
 {
     int i;
 	int	j;
     
     i = 0;
 	j = 0;
-	while (map[j])
+	while (map[0][j])
 		j++;
     while (map[i])
     {
