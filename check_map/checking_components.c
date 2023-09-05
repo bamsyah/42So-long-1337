@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 21:03:47 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/05 21:30:54 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/05 22:31:56 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,6 @@ int	collectible(char *player)
         }
         i++;
     }
-	ft_printf("Error\n2 exit");
+	ft_printf("Error\nyou need more coins");
     exit (0);
 }
