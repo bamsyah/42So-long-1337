@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 17:27:28 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/04 10:31:21 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/05 21:52:23 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,6 @@ typedef struct map
 	int		y_player;
 	int		x_exit;
 	int		y_exit;
-	int		map_width;
-	int		map_height;
 }t_map;
 
 // -------------------Printf Function-------------------
@@ -70,6 +68,14 @@ void	ft_bzero(void *s, size_t n);
 
 // --------------------Check map------------------------
 void	check_name(char *map);
-char	check_newline(char *split);
+void	check_newline(char *split);
+void	check_components(char **wall);
+void    one_player(char *player);
+void	one_exit(char *player);
+int		collectible(char *player);
+void	check_rectangular(**map);
+void    check_wall(**map);
+int		check(char *map);
+void    left_right(**map);
 // --------------------Check map------------------------
 #endif
