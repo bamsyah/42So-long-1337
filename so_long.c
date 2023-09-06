@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:53 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/06 11:47:58 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/06 12:06:23 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	main(int ac, char **av)
 	check_wall(check.map);
 	left_right(check.map);
 	player_position(check.map);
-	check.mlx = mlx_init();
-	check.window = mlx_new_window(check.mlx, 800, 500, "Hello world!");
-	mlx_loop(check.mlx);
+	// check.mlx = mlx_init();
+	// check.window = mlx_new_window(check.mlx, 800, 500, "so_long");
+	// mlx_loop(check.mlx);
 }
