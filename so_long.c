@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/31 17:27:43 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/05 21:53:24 by bamsyah          ###   ########.fr       */
+/*   Created: 2023/09/06 04:44:53 by bamsyah           #+#    #+#             */
+/*   Updated: 2023/09/06 04:44:56 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*map(int fd)
 		check_newline(split);
 		one_player(split);
 		one_exit(split);
-		collectible(split); // Check !!!!!!!
+		collectible(split);
 	}
 	return (split);
 }
@@ -39,10 +39,10 @@ int	main(int ac, char **av)
 	t_map	check;
 
 	if (ac != 2)
-		ft_printf("Error of reading Map\n");
+		invalid_map();
 	fd = open(av[1], O_RDONLY);
 	if (fd == -1)
-		ft_printf("Error fd\nInvalid map");
+		invalid_map();
 	check_name(av[1]);
 	line = map(fd);
 	check.map = ft_split(line, '\n');
@@ -50,4 +50,5 @@ int	main(int ac, char **av)
 	check_rectangular(check.map);
 	check_wall(check.map);
 	left_right(check.map);
+	player_position(check.map);
 }

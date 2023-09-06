@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checking_components.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: badreddinemsyah <badreddinemsyah@studen    +#+  +:+       +#+        */
+/*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 21:03:47 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/06 00:58:45 by badreddinem      ###   ########.fr       */
+/*   Updated: 2023/09/06 04:45:51 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

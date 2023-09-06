@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   invalid_map.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/19 16:31:46 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/06 04:45:37 by bamsyah          ###   ########.fr       */
+/*   Created: 2023/09/06 04:11:45 by badreddinem       #+#    #+#             */
+/*   Updated: 2023/09/06 04:45:15 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-void	ft_bzero(void *s, size_t n)
+void    invalid_map(void)
 {
-	size_t	i;
-	char	*str;
-
-	i = 0;
-	str = s;
-	while (i < n)
-	{
-		str[i] = '\0';
-		i++;
-	}
+    ft_printf("Error\nInvalid map");
+	exit (0);
 }

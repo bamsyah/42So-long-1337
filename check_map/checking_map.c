@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checking_map.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: badreddinemsyah <badreddinemsyah@studen    +#+  +:+       +#+        */
+/*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 10:19:30 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/06 00:58:45 by badreddinem      ###   ########.fr       */
+/*   Updated: 2023/09/06 04:45:01 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@ void	check_name(char *map)
 	if ((map[i - 1] != 'r') || (map[i - 2] != 'e') 
 		|| (map[i - 3] != 'b') || (map[i - 4] != '.'))
 	{
-		ft_printf("Error\ninvalid map name");
-		exit (0);
+		invalid_map();
 	}
 }
 
@@ -83,8 +82,7 @@ void	check_rectangular(char **map)
 		{
 			if (len != map[i][j])
 			{
-				ft_printf("Error\nInvalid map");
-				exit (0);
+				invalid_map();
 			}
 			j++;
 		}

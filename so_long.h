@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/31 17:27:28 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/05 21:52:23 by bamsyah          ###   ########.fr       */
+/*   Created: 2023/09/06 04:44:24 by bamsyah           #+#    #+#             */
+/*   Updated: 2023/09/06 04:47:26 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ size_t	ft_strlen2(const char *s);
 char	*ft_strjoin2(char const *s1, char const *s2);
 char	**ft_split(char const *s, char c);
 void	ft_bzero(void *s, size_t n);
+void    invalid_map(void);
 // ------------------Utils Function---------------------
 
 // --------------------Check map------------------------
@@ -73,9 +74,10 @@ void	check_components(char **wall);
 void    one_player(char *player);
 void	one_exit(char *player);
 int		collectible(char *player);
-void	check_rectangular(**map);
-void    check_wall(**map);
+void	check_rectangular(char **map);
+void    check_wall(char **map);
 int		check(char *map);
-void    left_right(**map);
+void    left_right(char **map);
+void	player_position(char **map)
 // --------------------Check map------------------------
 #endif
