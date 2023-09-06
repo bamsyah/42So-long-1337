@@ -6,14 +6,14 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:11:45 by badreddinem       #+#    #+#             */
-/*   Updated: 2023/09/06 04:45:15 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/06 09:46:13 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-void    invalid_map(void)
+void	invalid_map(void)
 {
-    ft_printf("Error\nInvalid map");
+	ft_printf("Error\n");
 	exit (0);
 }

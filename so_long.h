@@ -6,13 +6,14 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:24 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/06 04:47:26 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/06 11:52:04 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
+# include <mlx.h>
 # include <fcntl.h>
 # include <stdarg.h>
 # include <stdio.h>
@@ -29,6 +30,8 @@ typedef struct map
 	int		y_player;
 	int		x_exit;
 	int		y_exit;
+	void	*mlx;
+	void	*window;
 }t_map;
 
 // -------------------Printf Function-------------------
@@ -64,20 +67,20 @@ size_t	ft_strlen2(const char *s);
 char	*ft_strjoin2(char const *s1, char const *s2);
 char	**ft_split(char const *s, char c);
 void	ft_bzero(void *s, size_t n);
-void    invalid_map(void);
+void	invalid_map(void);
 // ------------------Utils Function---------------------
 
 // --------------------Check map------------------------
 void	check_name(char *map);
 void	check_newline(char *split);
 void	check_components(char **wall);
-void    one_player(char *player);
+void	one_player(char *player);
 void	one_exit(char *player);
-int		collectible(char *player);
+void		collectible(char *player);
 void	check_rectangular(char **map);
-void    check_wall(char **map);
+void	check_wall(char **map);
 int		check(char *map);
-void    left_right(char **map);
-void	player_position(char **map)
+void	left_right(char **map);
+void	player_position(char **map);
 // --------------------Check map------------------------
 #endif

@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:42 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/06 04:44:44 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/06 11:50:00 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,54 +39,56 @@ void	player_position(char **map)
 		invalid_map();
 }
 
-void    check_wall(char **map)
+void	check_wall(char **map)
 {
-    int i;
+	int	i;
 	int	j;
-    
-    i = 0;
+
+	i = 0;
 	j = 0;
 	while (map[j])
 		j++;
-    while (map[i])
-    {
-        if (check(map[0][i]) || check(map[j][i]))
-        {
-			invalid_map();
-        }
-		i++;
-    }
-}
-
-void    left_right(char **map)
-{
-    int i;
-	int	j;
-    
-    i = 0;
-	j = 0;
-	while (map[0][j])
-		j++;
-    while (map[i])
-    {
-        if (check(map[i][0]))
-        {
-			invalid_map();
-        }
-        if (check(map[i][j]))
+	while (map[i])
+	{
+		if (check(&map[0][i]) || check(&map[j][i]))
 		{
 			invalid_map();
 		}
 		i++;
-    }
+	}
+}
+
+void	left_right(char **map)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while (map[0][j])
+		j++;
+	while (map[i])
+	{
+		if (check(&map[i][0]))
+		{
+			invalid_map();
+		}
+		if (check(&map[i][j]))
+		{
+			invalid_map();
+		}
+		i++;
+	}
 }
 
 int	check(char *map)
 {
 	int	i;
+
+	i = 0;
 	while (map[i])
 	{
-		if (map != '1')
+		if (map[i] != '1')
 		{
 			return (0);
 		}

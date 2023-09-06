@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 10:19:30 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/06 04:45:01 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/06 11:25:52 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,9 @@ void	check_components(char **components)
 		j = 0;
 		while (components[i][j])
 		{
-			if ((components[i][j] != '1') && (components[i][j] != 'E') && (components[i][j] != 'P') 
-			&& (components[i][j] != 'C') && (components[i][j] != '0'))
+			if ((components[i][j] != '1') && (components[i][j] != 'E') 
+			&& (components[i][j] != 'P') && (components[i][j] != 'C') 
+			&& (components[i][j] != '0'))
 			{
 				ft_printf("Error\nInvalid map");
 				exit (0);
@@ -73,11 +74,12 @@ void	check_rectangular(char **map)
 	int	len;
 	int	i;
 	int	j;
-	
+
 	len = ft_strlen2(map[0]);
 	i = 0;
 	while (map[i])
 	{
+		j = 0;
 		while (map[i][j])
 		{
 			if (len != map[i][j])
