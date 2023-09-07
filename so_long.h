@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:24 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/06 11:52:04 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/07 16:48:48 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void	check_newline(char *split);
 void	check_components(char **wall);
 void	one_player(char *player);
 void	one_exit(char *player);
-void		collectible(char *player);
+void	collectible(char *player);
 void	check_rectangular(char **map);
 void	check_wall(char **map);
 int		check(char *map);
