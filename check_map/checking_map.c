@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 10:19:30 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/06 12:13:01 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/07 18:40:57 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ void	check_name(char *map)
 	i = ft_strlen2(map);
 	if ((map[i - 1] != 'r') || (map[i - 2] != 'e') 
 		|| (map[i - 3] != 'b') || (map[i - 4] != '.'))
+	{
 		invalid_map();
+	}
 }
 
 void	check_newline(char *split)
@@ -71,21 +73,15 @@ void	check_rectangular(char **map)
 {
 	int	len;
 	int	i;
-	int	j;
 
 	len = ft_strlen2(map[0]);
 	i = 0;
 	while (map[i])
 	{
-		j = 0;
-		while (map[i][j])
-		{
-			if (len != map[i][j])
+		if (len != (int)ft_strlen2(map[i]))
 			{
 				invalid_map();
 			}
-			j++;
-		}
 		i++;
 	}
 }

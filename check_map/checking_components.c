@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 21:03:47 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/06 09:55:06 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/07 18:16:49 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	one_player(char *player)
 	{
 		if (player[i] == 'P')
 		{
-			y = i;
+			y = i + 1;
 			while (player[y])
 			{
 				if (player[y] == 'P')
@@ -44,7 +44,7 @@ void	one_exit(char *player)
 	{
 		if (player[i] == 'E')
 		{
-			y = i;
+			y = i + 1;
 			while (player[y])
 			{
 				if (player[y] == 'E')

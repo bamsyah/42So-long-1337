@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:42 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/06 11:50:00 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/07 18:56:09 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,10 @@ void	check_wall(char **map)
 	j = 0;
 	while (map[j])
 		j++;
-	while (map[i])
+	while (map[0][i] && map[j - 1][i])
 	{
-		if (check(&map[0][i]) || check(&map[j][i]))
-		{
+		if ((map[0][i] != '1') || (map[j - 1][i] != '1'))
 			invalid_map();
-		}
 		i++;
 	}
 }
@@ -69,30 +67,9 @@ void	left_right(char **map)
 		j++;
 	while (map[i])
 	{
-		if (check(&map[i][0]))
-		{
+		if ((map[i][0] != '1') || (map[i][j - 1] != '1'))
 			invalid_map();
-		}
-		if (check(&map[i][j]))
-		{
-			invalid_map();
-		}
 		i++;
 	}
 }
 
-int	check(char *map)
-{
-	int	i;
-
-	i = 0;
-	while (map[i])
-	{
-		if (map[i] != '1')
-		{
-			return (0);
-		}
-		i++;
-	}
-	return (1);
-}

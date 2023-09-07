@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:53 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/06 12:18:06 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/07 18:56:24 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,20 @@
 char	*map(int fd)
 {
 	char	*read_line;
-	char	*split;
+	char	*split = NULL;
 
 	while (1)
 	{
 		read_line = get_next_line(fd);
-		{
-			split = ft_strjoin2(split, read_line);
-			free(read_line);
-		}
-		check_newline(split);
-		one_player(split);
-		one_exit(split);
-		collectible(split);
+		if (!read_line)
+			break;
+		split = ft_strjoin2(split, read_line);
+		free(read_line);
 	}
+	check_newline(split);
+	one_player(split);
+	one_exit(split);
+	collectible(split);
 	return (split);
 }
 
@@ -51,7 +51,7 @@ int	main(int ac, char **av)
 	check_wall(check.map);
 	left_right(check.map);
 	player_position(check.map);
-	check.mlx = mlx_init();
-	check.window = mlx_new_window(check.mlx, 800, 500, "so_long");
-	mlx_loop(check.mlx);
+	// check.mlx = mlx_init();
+	// check.window = mlx_new_window(check.mlx, 800, 500, "so_long");
+	// mlx_loop(check.mlx);
 }

@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:24 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/07 16:48:48 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/07 18:52:33 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,6 @@ void	one_exit(char *player);
 void	collectible(char *player);
 void	check_rectangular(char **map);
 void	check_wall(char **map);
-int		check(char *map);
 void	left_right(char **map);
 void	player_position(char **map);
 // --------------------Check map------------------------
