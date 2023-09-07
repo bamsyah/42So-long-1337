@@ -6,7 +6,7 @@
 #    By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/31 17:38:36 by bamsyah           #+#    #+#              #
-#    Updated: 2023/09/06 11:55:14 by bamsyah          ###   ########.fr        #
+#    Updated: 2023/09/06 15:28:04 by bamsyah          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,8 +22,6 @@ SRC = ft_printf/function.c ft_printf/ft_printf.c  \
 
 OBJ = $(SRC:.c=.o)
 
-
-
 all: $(NAME)
 
 $(NAME): $(OBJ)
@@ -34,5 +32,5 @@ clean:
 
 fclean: clean
 	rm -rf $(NAME)
-	
+
 re: fclean all

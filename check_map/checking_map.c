@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 10:19:30 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/06 12:02:46 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/06 12:13:01 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,31 +17,9 @@ void	check_name(char *map)
 	int	i;
 
 	i = ft_strlen2(map);
-	// if ((map[i - 1] != 'r') || (map[i - 2] != 'e') 
-	// 	|| (map[i - 3] != 'b') || (map[i - 4] != '.'))
-	// {
-	// 	invalid_map();
-	// }
-	if (map[i - 1] != 'r')
-	{
-		write(2, "Error\ninvalid map name", 23);
-		exit (0);
-	}
-	if (map[i - 2] != 'e')
-	{
-		write(2, "Error\ninvalid map name", 23);
-		exit(0);
-	}
-	if (map[i - 3] != 'b')
-	{
-		write(2, "Error\ninvalid map name", 23);
-		exit(0);
-	}
-	if (map[i - 4] != '.')
-	{
-		write(2, "Error\ninvalid map name", 23);
-		exit(0);
-	}
+	if ((map[i - 1] != 'r') || (map[i - 2] != 'e') 
+		|| (map[i - 3] != 'b') || (map[i - 4] != '.'))
+		invalid_map();
 }
 
 void	check_newline(char *split)
