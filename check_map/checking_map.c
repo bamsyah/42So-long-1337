@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 10:19:30 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/07 18:40:57 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/12 16:09:59 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	check_name(char *map)
 	int	i;
 
 	i = ft_strlen2(map);
-	if ((map[i - 1] != 'r') || (map[i - 2] != 'e') 
+	if ((map[i - 1] != 'r') || (map[i - 2] != 'e')
 		|| (map[i - 3] != 'b') || (map[i - 4] != '.'))
 	{
 		invalid_map();
@@ -56,8 +56,8 @@ void	check_components(char **components)
 		j = 0;
 		while (components[i][j])
 		{
-			if ((components[i][j] != '1') && (components[i][j] != 'E') 
-			&& (components[i][j] != 'P') && (components[i][j] != 'C') 
+			if ((components[i][j] != '1') && (components[i][j] != 'E')
+			&& (components[i][j] != 'P') && (components[i][j] != 'C')
 			&& (components[i][j] != '0'))
 			{
 				ft_printf("Error\nInvalid map");
@@ -79,9 +79,9 @@ void	check_rectangular(char **map)
 	while (map[i])
 	{
 		if (len != (int)ft_strlen2(map[i]))
-			{
-				invalid_map();
-			}
+		{
+			invalid_map();
+		}
 		i++;
 	}
 }
