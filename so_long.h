@@ -6,13 +6,13 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:24 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/07 18:52:33 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/13 21:41:53 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
-
+// -----------------------Library-----------------------
 # include <mlx.h>
 # include <fcntl.h>
 # include <stdarg.h>
@@ -21,18 +21,20 @@
 # include <unistd.h>
 # include <limits.h>
 # include <stdint.h>
+// -----------------------Library-----------------------
 
+// -----------------------Struct------------------------
 typedef struct map
 {
 	char	**map;
-	int		coines;
-	int		x_player;
-	int		y_player;
-	int		x_exit;
-	int		y_exit;
-	void	*mlx;
-	void	*window;
 }t_map;
+
+typedef struct mlx
+{
+	void	*mlx;
+	void	*mlx_window;
+}t_mlx;
+// -----------------------Struct------------------------
 
 // -------------------Printf Function-------------------
 int		ft_putchar_len(char c);
