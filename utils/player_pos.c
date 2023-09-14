@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:19:22 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/14 15:34:01 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/14 22:54:02 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ void	player_pos(t_map *map, t_mlx *position)
 			{
 				position->height_p = x;
 				position->width_p = y;
-				exit(0);
 			}
 			y++;
 		}

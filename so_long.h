@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:24 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/14 15:35:29 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/14 23:37:27 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,9 @@ void	ft_bzero(void *s, size_t n);
 void	invalid_map(void);
 void	player_pos(t_map *map, t_mlx *position);
 // ------------------Utils Function---------------------
+
+void	add_image(t_mlx *add);
+void	put_image(t_map *map, t_mlx *window);
 
 // --------------------Check map------------------------
 void	check_name(char *map);
