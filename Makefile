@@ -6,13 +6,13 @@
 #    By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/31 17:38:36 by bamsyah           #+#    #+#              #
-#    Updated: 2023/09/06 15:28:04 by bamsyah          ###   ########.fr        #
+#    Updated: 2023/09/14 00:57:47 by bamsyah          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = so_long
 CC = clang
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror #-fsanitize=address
 
 SRC = ft_printf/function.c ft_printf/ft_printf.c  \
 	utils/ft_calloc.c utils/ft_split.c utils/ft_strdup2.c utils/invalid_map.c utils/ft_bzero.c \

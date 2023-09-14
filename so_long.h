@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:24 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/13 21:41:53 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/14 15:35:29 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,23 @@ typedef struct mlx
 {
 	void	*mlx;
 	void	*mlx_window;
+	void	*exit;
+	void	*coin;
+	void	*play;
+	void	*wall;
+	void	*back;
+	int		height_p;
+	int		width_p;
+	int		height;
+	int		width;
+	void	*img;
+	char	*addr;
+	int		bits_per_pixel;
+	int		line_length;
+	int		endian;
+	int		offset;
 }t_mlx;
+
 // -----------------------Struct------------------------
 
 // -------------------Printf Function-------------------
@@ -70,6 +86,7 @@ char	*ft_strjoin2(char const *s1, char const *s2);
 char	**ft_split(char const *s, char c);
 void	ft_bzero(void *s, size_t n);
 void	invalid_map(void);
+void	player_pos(t_map *map, t_mlx *position);
 // ------------------Utils Function---------------------
 
 // --------------------Check map------------------------
