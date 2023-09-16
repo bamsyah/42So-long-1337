@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 22:50:06 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/16 05:19:42 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/16 05:41:06 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,17 +54,17 @@ void	line_25(t_map *map, t_mlx *window, int i, int j)
 {
 	if (map->map[i][j] == '0')
 		mlx_put_image_to_window(window->mlx, window->mlx_window,
-			window->back, j * 10, i * 10);
+			window->back, j * 80, i * 80);
 	else if (map->map[i][j] == '1')
 		mlx_put_image_to_window(window->mlx, window->mlx_window,
-			window->wall, j * 10, i * 10);
+			window->wall, j * 80, i * 80);
 	else if (map->map[i][j] == 'P')
 		mlx_put_image_to_window(window->mlx, window->mlx_window,
-			window->play, j * 10, i * 10);
+			window->play, j * 80, i * 80);
 	else if (map->map[i][j] == 'E')
 		mlx_put_image_to_window(window->mlx, window->mlx_window,
-			window->exit, j * 10, i * 10);
+			window->exit, j * 80, i * 80);
 	else if (map->map[i][j] == 'C')
 		mlx_put_image_to_window(window->mlx, window->mlx_window,
-			window->coin, j * 10, i * 10);
+			window->coin, j * 80, i * 80);
 }
