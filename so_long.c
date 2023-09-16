@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:53 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/16 03:04:00 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/16 03:32:06 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,6 @@ char	*map(int fd)
 	return (split);
 }
 
-void	my_mlx_pixel_put(t_mlx *window, int x, int y, int color)
-{
-	char	*dst;
-
-	dst = window->addr + (y * window->line_length + x * (window->bits_per_pixel / 8));
-	*(unsigned int*)dst = color;
-}
-
 int	main(int ac, char **av)
 {
 	int		fd;
@@ -56,16 +48,7 @@ int	main(int ac, char **av)
 	check_name(av[1]);
 	line = map(fd);
 	check.map = ft_split(line, '\n');
-	check_components(check.map);
-	check_rectangular(check.map);
-	check_wall(check.map);
-	left_right(check.map);
-	player_position(check.map);
-	window.mlx = mlx_init();
-	window.mlx_window = mlx_new_window(window.mlx, 800, 500, "so_long");
-	window.img = mlx_new_image(window.mlx, 1920, 1080);
-	window.addr = mlx_get_data_addr(window.img, &window.bits_per_pixel, &window.line_length, &window.endian);
-	add_image(&window);
-	put_image(&check, &window);
+	check_all(&check);
+	ft_window(&window, &check);
 	mlx_loop(window.mlx);
 }

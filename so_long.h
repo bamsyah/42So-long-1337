@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:24 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/14 23:37:27 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/16 03:38:21 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,9 +71,7 @@ char	*read_file(int fd, char *rest);
 char	*get_next_line(int fd);
 char	*ft_getline(char *rest);
 
-# ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1
-# endif
 // -------------------Get Next Line---------------------
 
 // ------------------Utils Function---------------------
@@ -89,8 +87,16 @@ void	invalid_map(void);
 void	player_pos(t_map *map, t_mlx *position);
 // ------------------Utils Function---------------------
 
+// -----------------Window Function---------------------
 void	add_image(t_mlx *add);
 void	put_image(t_map *map, t_mlx *window);
+void	draw_map(t_mlx *add, t_map *map);
+void	ft_window(t_mlx *window, t_map *check);
+void	check_all(t_map *check);
+
+# define WINDOW_WIDTH 800
+# define WINDOW_HEIGHT 500
+// -----------------Window Function---------------------
 
 // --------------------Check map------------------------
 void	check_name(char *map);

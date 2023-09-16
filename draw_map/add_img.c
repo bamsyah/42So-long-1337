@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 22:50:06 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/16 03:04:20 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/16 03:09:46 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,10 @@ void	put_image(t_map *map, t_mlx *window)
 		}
 		i++;
 	}
+}
+
+void	draw_map(t_mlx *add, t_map *map)
+{
+	add_image(add);
+	put_image(map, add);
 }
