@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   player_pos.c                                       :+:      :+:    :+:   */
+/*   map_dimension.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 15:19:22 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/14 22:54:02 by bamsyah          ###   ########.fr       */
+/*   Created: 2023/09/16 04:01:53 by bamsyah           #+#    #+#             */
+/*   Updated: 2023/09/16 05:06:18 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-void	player_pos(t_map *map, t_mlx *position)
+void	map_dimension(t_map *map_d)
 {
-	int	x;
-	int	y;
+	int	i;
 
-	x = 0;
-	while (map->map[x])
-	{
-		y = 0;
-		while (map->map[x][y])
-		{
-			if (map->map[x][y] == 'P')
-			{
-				position->height_p = x;
-				position->width_p = y;
-			}
-			y++;
-		}
-		x++;
-	}
+	i = 0;
+	i = ft_strlen2(map_d->map[0]);
+	map_d->width = i;
+	i = 0;
+	while (map_d->map[i])
+		i++;
+	map_d->height = i;
 }

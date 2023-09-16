@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:24 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/16 03:38:21 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/16 05:17:52 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@
 typedef struct map
 {
 	char	**map;
+	int		height;
+	int		width;
 }t_map;
 
 typedef struct mlx
@@ -38,16 +40,11 @@ typedef struct mlx
 	void	*play;
 	void	*wall;
 	void	*back;
-	int		height_p;
-	int		width_p;
-	int		height;
-	int		width;
 	void	*img;
 	char	*addr;
 	int		bits_per_pixel;
 	int		line_length;
 	int		endian;
-	int		offset;
 }t_mlx;
 
 // -----------------------Struct------------------------
@@ -71,7 +68,7 @@ char	*read_file(int fd, char *rest);
 char	*get_next_line(int fd);
 char	*ft_getline(char *rest);
 
-#  define BUFFER_SIZE 1
+# define BUFFER_SIZE 1
 // -------------------Get Next Line---------------------
 
 // ------------------Utils Function---------------------
@@ -93,9 +90,8 @@ void	put_image(t_map *map, t_mlx *window);
 void	draw_map(t_mlx *add, t_map *map);
 void	ft_window(t_mlx *window, t_map *check);
 void	check_all(t_map *check);
-
-# define WINDOW_WIDTH 800
-# define WINDOW_HEIGHT 500
+void	map_dimension(t_map *map_d);
+void	line_25(t_map *map, t_mlx *window, int i, int j);
 // -----------------Window Function---------------------
 
 // --------------------Check map------------------------
