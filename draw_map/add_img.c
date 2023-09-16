@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 22:50:06 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/15 00:22:14 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/16 03:04:20 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,6 @@ void	put_image(t_map *map, t_mlx *window)
 		j = 0;
 		while (map->map[i][j])
 		{
-			
-			printf("%c\n", map->map[i][j]);
 			if (map->map[i][j] == '0')
 				mlx_put_image_to_window(window->mlx, window->mlx_window, window->back, j * 10, i * 10);
 			else if (map->map[i][j] == '1')

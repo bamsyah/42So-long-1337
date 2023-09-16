@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:53 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/14 23:50:30 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/16 03:04:00 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,9 +66,6 @@ int	main(int ac, char **av)
 	window.img = mlx_new_image(window.mlx, 1920, 1080);
 	window.addr = mlx_get_data_addr(window.img, &window.bits_per_pixel, &window.line_length, &window.endian);
 	add_image(&window);
-	if(window.back == NULL)
-		printf("hna\n");
 	put_image(&check, &window);
-	printf("hey\n");
 	mlx_loop(window.mlx);
 }
