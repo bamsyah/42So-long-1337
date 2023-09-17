@@ -6,12 +6,12 @@
 #    By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/31 17:38:36 by bamsyah           #+#    #+#              #
-#    Updated: 2023/09/16 04:10:20 by bamsyah          ###   ########.fr        #
+#    Updated: 2023/09/16 06:02:46 by bamsyah          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = so_long
-CC = gcc
+CC = clang
 CFLAGS = -Wall -Wextra -Werror 
 
 SRC = ft_printf/function.c ft_printf/ft_printf.c  \
