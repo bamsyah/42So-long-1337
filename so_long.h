@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:24 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/16 05:21:35 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/17 11:35:59 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,13 @@
 typedef struct map
 {
 	char	**map;
+	char	**map_c;
+	char	**map_e;
 	int		height;
 	int		width;
+	int		player_x;
+	int		player_y;
+	int		exit;
 }t_map;
 
 typedef struct mlx
@@ -81,7 +86,7 @@ char	*ft_strjoin2(char const *s1, char const *s2);
 char	**ft_split(char const *s, char c);
 void	ft_bzero(void *s, size_t n);
 void	invalid_map(void);
-void	player_pos(t_map *map, t_mlx *position);
+void	player_pos(t_map *map);
 // ------------------Utils Function---------------------
 
 // -----------------Window Function---------------------
@@ -105,5 +110,7 @@ void	check_rectangular(char **map);
 void	check_wall(char **map);
 void	left_right(char **map);
 void	player_position(char **map);
+void	path_config(t_map *path);
+void	flood_e(t_map *map, int x, int y);
 // --------------------Check map------------------------
 #endif

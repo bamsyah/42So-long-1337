@@ -6,7 +6,7 @@
 #    By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/31 17:38:36 by bamsyah           #+#    #+#              #
-#    Updated: 2023/09/16 06:02:46 by bamsyah          ###   ########.fr        #
+#    Updated: 2023/09/17 11:37:59 by bamsyah          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ SRC = ft_printf/function.c ft_printf/ft_printf.c  \
 	utils/ft_strjoin2.c utils/ft_strlcat.c utils/ft_strlcpy.c utils/ft_strlen2.c \
 	get_next_line/get_next_line_utils.c get_next_line/get_next_line.c so_long.c \
 	check_map/checking_map.c check_map/check_wall.c check_map/checking_components.c \
-	draw_map/add_img.c draw_map/ft_window.c check_map/check_all.c check_map/map_dimension.c
+	draw_map/add_img.c draw_map/ft_window.c check_map/check_all.c check_map/map_dimension.c \
+	utils/player_pos.c check_map/flood.c 
 
 OBJ = $(SRC:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:53 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/16 04:12:00 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/17 12:05:01 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,10 @@ int	main(int ac, char **av)
 	check_name(av[1]);
 	line = map(fd);
 	check.map = ft_split(line, '\n');
+	check.map_e = ft_split(line, '\n');
 	check_all(&check);
 	map_dimension(&check);
+	path_config(&check);
 	ft_window(&window, &check);
 	mlx_loop(window.mlx);
 }
