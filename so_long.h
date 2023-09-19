@@ -6,13 +6,13 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:24 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/19 13:33:50 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/19 15:20:40 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
-// -----------------------Library-----------------------
+// ----------------------Libraries----------------------
 # include <mlx.h>
 # include <fcntl.h>
 # include <stdarg.h>
@@ -21,7 +21,7 @@
 # include <unistd.h>
 # include <limits.h>
 # include <stdint.h>
-// -----------------------Library-----------------------
+// ----------------------Libraries----------------------
 
 // -----------------------Struct------------------------
 typedef struct map
@@ -35,6 +35,7 @@ typedef struct map
 	int		player_y;
 	int		exit;
 	int		collectible;
+	int		collectible_c;
 }t_map;
 
 typedef struct mlx
@@ -113,5 +114,6 @@ void	left_right(char **map);
 void	player_position(char **map);
 void	path_config(t_map *path);
 void	flood_e(t_map *map, int x, int y);
+void	flood_c(t_map *map, int x, int y);
 // --------------------Check map------------------------
 #endif
