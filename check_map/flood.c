@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 10:36:56 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/17 22:54:25 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/19 13:12:13 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,17 @@ void	flood_e(t_map *map, int x, int y)
 	if (map->map_e[x][y] == 'E')
 	{
 		map->exit++;
-		return;
+		return ;
 	}
-	if (map->map_e[x][y] == '0' || map->map_e[x][y] == 'P' || map->map_e[x][y] == 'C')
+	if (map->map_e[x][y] == '0' || map->map_e[x][y] == 'P' 
+		|| map->map_e[x][y] == 'C')
 	{
 		map->map_e[x][y] = '*';
 		flood_e(map, x, y - 1);
 		flood_e(map, x, y + 1);
 		flood_e(map, x - 1, y);
-		flood_e(map, x + 1, y);		
+		flood_e(map, x + 1, y);
 	}
-
 }
 
 void	path_config(t_map *path)
