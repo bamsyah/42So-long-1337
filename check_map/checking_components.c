@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checking_components.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
+/*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 21:03:47 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/07 18:16:49 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/19 13:37:21 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,21 +56,20 @@ void	one_exit(char *player)
 	}
 }
 
-void	collectible(char *player)
+void	collectible(char *player, t_map *map)
 {
 	int	i;
-	int	exist;
 
 	i = 0;
-	exist = -1;
+	map->collectible = 0;
 	while (player[i])
 	{
 		if (player[i] == 'C')
 		{
-			exist = 1;
+			map->collectible++;
 		}
 		i++;
 	}
-	if (exist == -1)
+	if (map->collectible == -1)
 		invalid_map();
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
+/*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:24 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/17 11:35:59 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/19 13:33:50 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ typedef struct map
 	int		player_x;
 	int		player_y;
 	int		exit;
+	int		collectible;
 }t_map;
 
 typedef struct mlx
@@ -105,7 +106,7 @@ void	check_newline(char *split);
 void	check_components(char **wall);
 void	one_player(char *player);
 void	one_exit(char *player);
-void	collectible(char *player);
+void	collectible(char *player, t_map *map);
 void	check_rectangular(char **map);
 void	check_wall(char **map);
 void	left_right(char **map);

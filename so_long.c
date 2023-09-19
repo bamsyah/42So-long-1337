@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bamsyah <bamsyah@student.42.fr>            +#+  +:+       +#+        */
+/*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:53 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/17 22:28:41 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/19 13:34:19 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-char	*map(int fd)
+char	*map(int fd, t_map *map)
 {
 	char	*read_line;
 	char	*split;
@@ -29,7 +29,7 @@ char	*map(int fd)
 	check_newline(split);
 	one_player(split);
 	one_exit(split);
-	collectible(split);
+	collectible(split, map);
 	return (split);
 }
 
@@ -46,7 +46,7 @@ int	main(int ac, char **av)
 	if (fd == -1)
 		invalid_map();
 	check_name(av[1]);
-	line = map(fd);
+	line = map(fd, &check);
 	check.map = ft_split(line, '\n');
 	check.map_e = ft_split(line, '\n');
 	check_all(&check);
