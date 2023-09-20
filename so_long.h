@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:24 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/20 01:44:31 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/20 01:49:41 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,4 +116,8 @@ void	path_config(t_map *path);
 void	flood_e(t_map *map, int x, int y);
 void	flood_c(t_map *map, int x, int y);
 // --------------------Check map------------------------
+
+// ----------------------Move---------------------------
+void	left_move(t_map *map, t_mlx *mlx);
+// ----------------------Move---------------------------
 #endif

@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:53 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/20 01:43:55 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/20 01:51:20 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,6 @@ int	main(int ac, char **av)
 	map_dimension(&check);
 	path_config(&check);
 	ft_window(&window, &check);
+	left_move(&check, &window);
 	mlx_loop(window.mlx);
 }
