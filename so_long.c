@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:53 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/19 14:48:30 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/20 01:43:55 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,13 @@ char	*map(int fd, t_map *map)
 	return (split);
 }
 
+void	ft_map(t_map *map, char *line)
+{
+	map->map = ft_split(line, '\n');
+	map->map_c = ft_split(line, '\n');
+	map->map_e = ft_split(line, '\n');
+}
+
 int	main(int ac, char **av)
 {
 	int		fd;
@@ -47,8 +54,7 @@ int	main(int ac, char **av)
 		invalid_map();
 	check_name(av[1]);
 	line = map(fd, &check);
-	check.map = ft_split(line, '\n');
-	check.map_e = ft_split(line, '\n');
+	ft_map(&check, line);
 	check_all(&check);
 	map_dimension(&check);
 	path_config(&check);

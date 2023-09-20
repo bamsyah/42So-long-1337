@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 10:36:56 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/19 15:19:14 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/09/20 01:38:52 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	flood_e(t_map *map, int x, int y)
 		map->exit++;
 		return ;
 	}
-	if (map->map_e[x][y] == '0' || map->map_e[x][y] == 'P' 
+	if (map->map_e[x][y] == '0' || map->map_e[x][y] == 'P'
 		|| map->map_e[x][y] == 'C')
 	{
 		map->map_e[x][y] = '1';
