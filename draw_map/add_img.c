@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 22:50:06 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/19 14:35:22 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/11/16 04:18:49 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,19 +52,21 @@ void	draw_map(t_mlx *add, t_map *map)
 
 void	line_25(t_map *map, t_mlx *window, int i, int j)
 {
-	if (map->map[i][j] == '0')
+	if (map->map[i][j] == '1')
 		mlx_put_image_to_window(window->mlx, window->mlx_window,
-			window->back, j * 80, i * 80);
-	else if (map->map[i][j] == '1')
+ 			window->wall, j * 80, i * 80);
+	else
+	{
 		mlx_put_image_to_window(window->mlx, window->mlx_window,
-			window->wall, j * 80, i * 80);
-	else if (map->map[i][j] == 'P')
+		window->back, j * 80, i * 80);
+		if (map->map[i][j] == 'P')
 		mlx_put_image_to_window(window->mlx, window->mlx_window,
 			window->play, j * 80, i * 80);
-	else if (map->map[i][j] == 'E')
+		if (map->map[i][j] == 'E')
 		mlx_put_image_to_window(window->mlx, window->mlx_window,
 			window->exit, j * 80, i * 80);
-	else if (map->map[i][j] == 'C')
+		if (map->map[i][j] == 'C')
 		mlx_put_image_to_window(window->mlx, window->mlx_window,
 			window->coin, j * 80, i * 80);
+	}
 }

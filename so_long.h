@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:24 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/20 01:49:41 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/11/16 03:09:55 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 // ----------------------Libraries----------------------
 
 // -----------------------Struct------------------------
+
 typedef struct map
 {
 	char	**map;
@@ -36,8 +37,7 @@ typedef struct map
 	int		exit;
 	int		collectible;
 	int		collectible_c;
-}t_map;
-
+}	t_map;
 typedef struct mlx
 {
 	void	*mlx;
@@ -52,9 +52,24 @@ typedef struct mlx
 	int		bits_per_pixel;
 	int		line_length;
 	int		endian;
-}t_mlx;
+	t_map	map;
+}	t_mlx;
+
+
 
 // -----------------------Struct------------------------
+
+// -------------------Macros--------------------
+
+#define KEY_W 119		// 13 
+#define KEY_S 115	 	// 1 
+#define KEY_D 100	 	// 2 
+#define KEY_A 97		// 0 
+#define KEY_EXIT 65307	// 53 
+#define KEY_RIGHT 65363 // 124 
+#define KEY_LEFT 65361
+#define KEY_PRESS 2
+// -------------------Macros--------------------
 
 // -------------------Printf Function-------------------
 int		ft_putchar_len(char c);
@@ -111,13 +126,17 @@ void	collectible(char *player, t_map *map);
 void	check_rectangular(char **map);
 void	check_wall(char **map);
 void	left_right(char **map);
-void	player_position(char **map);
+void	player_position(t_map *map);
 void	path_config(t_map *path);
 void	flood_e(t_map *map, int x, int y);
 void	flood_c(t_map *map, int x, int y);
 // --------------------Check map------------------------
 
 // ----------------------Move---------------------------
-void	left_move(t_map *map, t_mlx *mlx);
+int		key_press(int key, t_mlx *mlx);
+void	move_up(t_mlx *mlx);
+void	move_down(t_mlx *mlx);
+void	move_left(t_mlx *mlx);
+void	move_right(t_mlx *mlx);
 // ----------------------Move---------------------------
 #endif

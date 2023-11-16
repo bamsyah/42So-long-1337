@@ -3,39 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   check_wall.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: hamaarou <hamaarou@1337.student.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:42 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/19 14:35:09 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/11/16 01:51:45 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-void	player_position(char **map)
+void	player_position(t_map *map)
 {
 	int	position;
 	int	i;
-	int	p;
-	int	y;
 
 	i = -1;
-	p = 0;
-	y = 0;
-	while (map[++i])
+	while (map->map[++i])
 	{
 		position = -1;
-		while (map[i][++position])
+		while (map->map[i][++position])
 		{
-			if (map[i][position] == 'P')
+			if (map->map[i][position] == 'P')
 			{
-				y = i;
-				p = position;
+				map->player_y = i;
+				map->player_x = position;
 			}
 		}
 	}
-	if ((map[y][p - 1] == '1') && (map[y][p + 1] == '1')
-	&& (map[y - 1][p] == '1') && (map[y + 1][p] == '1'))
+	if ((map->map[map->player_y][map->player_x - 1] == '1')
+		&& (map->map[map->player_y][map->player_x + 1] == '1')
+		&& (map->map[map->player_y - 1][map->player_x] == '1')
+		&& (map->map[map->player_y + 1][map->player_x] == '1'))
 		invalid_map();
 }
 

@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:53 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/20 01:51:20 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/11/16 03:00:46 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ int	main(int ac, char **av)
 {
 	int		fd;
 	char	*line;
-	t_map	check;
 	t_mlx	window;
 
 	if (ac != 2)
@@ -53,12 +52,12 @@ int	main(int ac, char **av)
 	if (fd == -1)
 		invalid_map();
 	check_name(av[1]);
-	line = map(fd, &check);
-	ft_map(&check, line);
-	check_all(&check);
-	map_dimension(&check);
-	path_config(&check);
-	ft_window(&window, &check);
-	left_move(&check, &window);
+	line = map(fd, &window.map);
+	ft_map(&window.map, line);
+	check_all(&window.map);
+	map_dimension(&window.map);
+	path_config(&window.map);
+	ft_window(&window, &window.map);
+	mlx_hook(window.mlx_window, 2, 1L << 0, key_press, &window);
 	mlx_loop(window.mlx);
 }

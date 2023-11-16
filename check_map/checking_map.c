@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checking_map.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: hamaarou <hamaarou@1337.student.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 10:19:30 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/19 14:34:49 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/11/16 00:56:51 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	check_name(char *map)
 {
 	int	i;
-
+	
 	i = ft_strlen2(map);
 	if ((map[i - 1] != 'r') || (map[i - 2] != 'e')
 		|| (map[i - 3] != 'b') || (map[i - 4] != '.'))
