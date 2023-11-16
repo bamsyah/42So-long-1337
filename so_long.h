@@ -58,14 +58,14 @@ typedef struct mlx
 
 // -------------------Macros--------------------
 
-#define KEY_W 119		// 13 
-#define KEY_S 115	 	// 1 
-#define KEY_D 100	 	// 2 
-#define KEY_A 97		// 0 
-#define KEY_EXIT 65307	// 53 
-#define KEY_RIGHT 65363 // 124 
-#define KEY_LEFT 65361
-#define KEY_PRESS 2
+# define KEY_W 119		// 13 
+# define KEY_S 115	 	// 1 
+# define KEY_D 100	 	// 2 
+# define KEY_A 97		// 0 
+# define KEY_EXIT 65307	// 53 
+# define KEY_RIGHT 65363 // 124 
+# define KEY_LEFT 65361
+# define KEY_PRESS 2
 // -------------------Macros--------------------
 
 // -------------------Printf Function-------------------

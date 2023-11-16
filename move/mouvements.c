@@ -34,7 +34,7 @@ void	move_up(t_mlx *mlx)
 		{
 			(--mlx->map.collectible);
 			mlx->map.map[mlx->map.player_x - 1][mlx->map.player_y] = '0';
-			mlx_put_image_to_window(mlx->mlx, mlx->mlx_window,mlx->back,
+			mlx_put_image_to_window(mlx->mlx, mlx->mlx_window, mlx->back,
 				mlx->map.player_y * 80, mlx->map.player_x * 80 - 80);
 		}
 		mlx_put_image_to_window(mlx->mlx, mlx->mlx_window, mlx->back,
@@ -57,7 +57,7 @@ void	move_down(t_mlx *mlx)
 		{
 			(--mlx->map.collectible);
 			mlx->map.map[mlx->map.player_x + 1][mlx->map.player_y] = '0';
-			mlx_put_image_to_window(mlx->mlx, mlx->mlx_window,mlx->back,
+			mlx_put_image_to_window(mlx->mlx, mlx->mlx_window, mlx->back,
 				mlx->map.player_y * 80, mlx->map.player_x * 80 + 80);
 		}
 		mlx_put_image_to_window(mlx->mlx, mlx->mlx_window, mlx->back,
@@ -80,7 +80,7 @@ void	move_left(t_mlx *mlx)
 		{
 			(--mlx->map.collectible);
 			mlx->map.map[mlx->map.player_x][mlx->map.player_y - 1] = '0';
-			mlx_put_image_to_window(mlx->mlx, mlx->mlx_window,mlx->back,
+			mlx_put_image_to_window(mlx->mlx, mlx->mlx_window, mlx->back,
 				mlx->map.player_y * 80 - 80, mlx->map.player_x * 80);
 		}
 		mlx_put_image_to_window(mlx->mlx, mlx->mlx_window, mlx->back,
@@ -103,7 +103,7 @@ void	move_right(t_mlx *mlx)
 		{
 			(--mlx->map.collectible);
 			mlx->map.map[mlx->map.player_x][mlx->map.player_y + 1] = '0';
-			mlx_put_image_to_window(mlx->mlx, mlx->mlx_window,mlx->back,
+			mlx_put_image_to_window(mlx->mlx, mlx->mlx_window, mlx->back,
 				mlx->map.player_y * 80 + 80, mlx->map.player_x * 80);
 		}
 		mlx_put_image_to_window(mlx->mlx, mlx->mlx_window, mlx->back,

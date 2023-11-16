@@ -54,19 +54,19 @@ void	line_25(t_map *map, t_mlx *window, int i, int j)
 {
 	if (map->map[i][j] == '1')
 		mlx_put_image_to_window(window->mlx, window->mlx_window,
- 			window->wall, j * 80, i * 80);
+			window->wall, j * 80, i * 80);
 	else
 	{
 		mlx_put_image_to_window(window->mlx, window->mlx_window,
-		window->back, j * 80, i * 80);
+			window->back, j * 80, i * 80);
 		if (map->map[i][j] == 'P')
-		mlx_put_image_to_window(window->mlx, window->mlx_window,
-			window->play, j * 80, i * 80);
+			mlx_put_image_to_window(window->mlx, window->mlx_window,
+				window->play, j * 80, i * 80);
 		if (map->map[i][j] == 'E')
-		mlx_put_image_to_window(window->mlx, window->mlx_window,
-			window->exit, j * 80, i * 80);
+			mlx_put_image_to_window(window->mlx, window->mlx_window,
+				window->exit, j * 80, i * 80);
 		if (map->map[i][j] == 'C')
-		mlx_put_image_to_window(window->mlx, window->mlx_window,
-			window->coin, j * 80, i * 80);
+			mlx_put_image_to_window(window->mlx, window->mlx_window,
+				window->coin, j * 80, i * 80);
 	}
 }

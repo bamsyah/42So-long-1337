@@ -15,7 +15,7 @@
 void	check_name(char *map)
 {
 	int	i;
-	
+
 	i = ft_strlen2(map);
 	if ((map[i - 1] != 'r') || (map[i - 2] != 'e')
 		|| (map[i - 3] != 'b') || (map[i - 4] != '.'))
