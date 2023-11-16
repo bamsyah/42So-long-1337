@@ -12,7 +12,7 @@
 
 NAME = so_long
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror #-g3 -fsanitize=address
 
 SRC =  ft_printf/function.c ft_printf/ft_printf.c  \
 	utils/ft_calloc.c utils/ft_split.c utils/ft_strdup2.c utils/invalid_map.c utils/ft_bzero.c \
@@ -27,7 +27,7 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(OBJ) -Lmlx -lmlx -framework OpenGL -framework AppKit -o $(NAME)
+	$(CC) $(OBJ) -lmlx -lmlx -framework OpenGL -framework AppKit -o $(NAME)
 # linux --> $(CC) $(OBJ) -Lmlx_linux -lmlx_Linux -L/usr/lib -Imlx_linux -lXext -lX11 -lm -lz -o $(NAME)
 clean:
 	rm -rf $(OBJ)

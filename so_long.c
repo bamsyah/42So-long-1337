@@ -60,6 +60,5 @@ int	main(int ac, char **av)
 	ft_window(&window, &window.map);
 	mlx_hook(window.mlx_window, 2, 0, key_press, &window);
 	mlx_loop(window.mlx);
-	system("leaks so_long");
 }
 // linux --> mlx_hook(window.mlx_window, 2, 1L << 0, key_press, &window);

@@ -12,7 +12,7 @@
 
 #include "../so_long.h"
 
-char	*ft_strjoin2(char const *s1, char const *s2)
+char	*ft_strjoin2(char *s1, char const *s2)
 {
 	size_t	len;
 	char	*str;
@@ -29,5 +29,6 @@ char	*ft_strjoin2(char const *s1, char const *s2)
 		return (NULL);
 	ft_strlcpy(str, s1, ft_strlen2(s1) + 1);
 	ft_strlcat(str, s2, len + 1);
+	free(s1);
 	return (str);
 }

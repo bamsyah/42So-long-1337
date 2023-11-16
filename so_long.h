@@ -96,7 +96,7 @@ char	*ft_strdup2(const char *s1);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen2(const char *s);
-char	*ft_strjoin2(char const *s1, char const *s2);
+char	*ft_strjoin2(char *s1, char const *s2);
 char	**ft_split(char const *s, char c);
 void	ft_bzero(void *s, size_t n);
 void	invalid_map(void);
