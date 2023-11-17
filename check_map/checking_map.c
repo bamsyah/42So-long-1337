@@ -31,7 +31,7 @@ void	check_newline(char *split)
 	i = 0;
 	if (!split)
 	{
-		printf ("Error empty map\n");
+		ft_printf ("Error empty map\n");
 		exit (0);
 	}
 	if (split[i] == '\n')

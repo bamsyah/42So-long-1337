@@ -59,7 +59,6 @@ typedef struct mlx
 // -----------------------Struct------------------------
 
 // -------------------Macros--------------------
-
 # define KEY_W 13	// 13 119
 # define KEY_S 1	 	// 1 115
 # define KEY_D 2	 	// 2 100

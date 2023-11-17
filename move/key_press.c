@@ -17,6 +17,9 @@ int	key_press(int key, t_mlx *mlx)
 	if (key == KEY_EXIT)
 	{
 		mlx_destroy_window(mlx->mlx, mlx->mlx_window);
+		free(mlx->map.map);
+		free(mlx->map.map_c);
+		free(mlx->map.map_e);
 		exit(0);
 	}
 	if (key == KEY_W || key == KEY_UP)

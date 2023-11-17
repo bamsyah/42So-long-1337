@@ -12,7 +12,7 @@
 
 NAME = so_long
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g3 -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror #-g3 -fsanitize=address
 
 SRC =  ft_printf/function.c ft_printf/ft_printf.c  \
 	utils/ft_calloc.c utils/ft_split.c utils/ft_strdup2.c utils/invalid_map.c utils/ft_bzero.c \
