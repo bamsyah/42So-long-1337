@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:24 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/11/17 16:13:55 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/11/17 18:14:51 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ typedef struct map
 	int		width;
 	int		player_x;
 	int		player_y;
+	int		move_count;
 	int		exit;
 	int		collectible;
 	int		collectible_c;
@@ -63,6 +64,8 @@ typedef struct mlx
 # define KEY_D 100	 	// 2 100
 # define KEY_A 97		// 0 97
 # define KEY_EXIT 65307	// 53 65307
+# define KEY_UP 65362	// 126 65362
+# define KEY_DOWN 65364	// 125 65364
 # define KEY_RIGHT 65363 // 124 65363
 # define KEY_LEFT 65361
 # define KEY_PRESS 2

@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:53 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/11/17 16:19:27 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/11/17 18:30:26 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	free_all(void *param)
 
 	game = (t_mlx *)param;
 	free(game->map.map);
+	free(game->map.map_c);
+	free(game->map.map_e);
 	exit(0);
 	return (1);
 }
@@ -56,6 +58,7 @@ int	main(int ac, char **av)
 	char	*line;
 	t_mlx	window;
 
+	window.map.move_count = 0;
 	if (ac != 2)
 		invalid_map();
 	fd = open(av[1], O_RDONLY);
@@ -71,8 +74,8 @@ int	main(int ac, char **av)
 	path_config(&window.map);
 	ft_window(&window, &window.map);
 	mlx_hook(window.mlx_window, 2, 1L << 0, key_press, &window);
+	mlx_hook(window.mlx_window, 17, 1L << 7, free_all, &window);
 	mlx_loop(window.mlx);
-	system("leaks so_long");
 }
 // linux --> mlx_hook(window.mlx_window, 2, 1L << 0, key_press, &window);
 /* macos --> mlx_hook(window.mlx_window, 2, 0, key_press, &window);

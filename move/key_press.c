@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 02:49:38 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/11/16 04:15:48 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/11/17 18:21:00 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,19 @@
 
 int	key_press(int key, t_mlx *mlx)
 {
+	ft_printf("Move count: %d\n", mlx->map.move_count);
 	if (key == KEY_EXIT)
 	{
 		mlx_destroy_window(mlx->mlx, mlx->mlx_window);
 		exit(0);
 	}
-	if (key == KEY_W)
+	if (key == KEY_W || key == KEY_UP)
 		move_up(mlx);
-	else if (key == KEY_S)
+	else if (key == KEY_S || key == KEY_DOWN)
 		move_down(mlx);
-	else if (key == KEY_A)
+	else if (key == KEY_A || key == KEY_LEFT)
 		move_left(mlx);
-	else if (key == KEY_D)
+	else if (key == KEY_D || key == KEY_RIGHT)
 		move_right(mlx);
-	ft_printf("Player x pos: %d\n", mlx->map.player_x);
-	ft_printf("Player y pos: %d\n", mlx->map.player_y);
-	ft_printf("Collectibles left: %d\n", mlx->map.collectible);
 	return (0);
 }
