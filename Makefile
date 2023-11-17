@@ -6,7 +6,7 @@
 #    By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/31 17:38:36 by bamsyah           #+#    #+#              #
-#    Updated: 2023/11/16 02:49:23 by bamsyah          ###   ########.fr        #
+#    Updated: 2023/11/17 16:18:03 by bamsyah          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,8 +27,8 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(OBJ) -lmlx -lmlx -framework OpenGL -framework AppKit -o $(NAME) $(CFLAGS)
-# linux --> $(CC) $(OBJ) -Lmlx_linux -lmlx_Linux -L/usr/lib -Imlx_linux -lXext -lX11 -lm -lz -o $(NAME)
+# macos -->	$(CC) $(CFLAGS) $(OBJ) -lmlx -lmlx -framework OpenGL -framework AppKit -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJ) -Lmlx_linux -lmlx_Linux -L/usr/lib -Imlx_linux -lXext -lX11 -lm -lz -o $(NAME)
 clean:
 	rm -rf $(OBJ)
 

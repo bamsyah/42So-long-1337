@@ -6,22 +6,22 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:53 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/11/16 03:00:46 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/11/17 16:19:27 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-
 int	free_all(void *param)
 {
-	t_mlx *game;
+	t_mlx	*game;
 
 	game = (t_mlx *)param;
 	free(game->map.map);
 	exit(0);
 	return (1);
 }
+
 char	*map(int fd, t_map *map)
 {
 	char	*read_line;
@@ -70,9 +70,12 @@ int	main(int ac, char **av)
 	map_dimension(&window.map);
 	path_config(&window.map);
 	ft_window(&window, &window.map);
-	mlx_hook(window.mlx_window, 2, 0, key_press, &window);
-	mlx_hook(window.mlx_window, 17, 0, free_all, &window);
+	mlx_hook(window.mlx_window, 2, 1L << 0, key_press, &window);
 	mlx_loop(window.mlx);
 	system("leaks so_long");
 }
 // linux --> mlx_hook(window.mlx_window, 2, 1L << 0, key_press, &window);
+/* macos --> mlx_hook(window.mlx_window, 2, 0, key_press, &window);
+				mlx_hook(window.mlx_window, 17, 0, free_all, &window); */
+
+// mlx_hook(window.mlx_window, 17, 0, free_all, &window);
