@@ -14,7 +14,6 @@
 
 int	key_press(int key, t_mlx *mlx)
 {
-	ft_printf("Move count: %d\n", mlx->map.move_count);
 	if (key == KEY_EXIT)
 	{
 		mlx_destroy_window(mlx->mlx, mlx->mlx_window);
@@ -28,5 +27,6 @@ int	key_press(int key, t_mlx *mlx)
 		move_left(mlx);
 	else if (key == KEY_D || key == KEY_RIGHT)
 		move_right(mlx);
+	ft_printf("Move count: %d\n", mlx->map.move_count);
 	return (0);
 }

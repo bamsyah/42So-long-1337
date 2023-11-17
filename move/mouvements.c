@@ -30,6 +30,7 @@ void	move_up(t_mlx *mlx)
 	if ((mlx->map.map[mlx->map.player_x - 1][mlx->map.player_y] != '1'
 		&& mlx->map.map[mlx->map.player_x - 1][mlx->map.player_y] != 'E'))
 	{
+		mlx->map.move_count++;
 		if (mlx->map.map[mlx->map.player_x - 1][mlx->map.player_y] == 'C')
 		{
 			(--mlx->map.collectible);
@@ -53,6 +54,8 @@ void	move_down(t_mlx *mlx)
 	if ((mlx->map.map[mlx->map.player_x + 1][mlx->map.player_y] != '1'
 		&& mlx->map.map[mlx->map.player_x + 1][mlx->map.player_y] != 'E'))
 	{
+		if (mlx->map.map[mlx->map.player_x + 1][mlx->map.player_y] != '1')
+			mlx->map.move_count++;
 		if (mlx->map.map[mlx->map.player_x + 1][mlx->map.player_y] == 'C')
 		{
 			(--mlx->map.collectible);
@@ -76,6 +79,8 @@ void	move_left(t_mlx *mlx)
 	if ((mlx->map.map[mlx->map.player_x][mlx->map.player_y - 1] != '1'
 		&& mlx->map.map[mlx->map.player_x][mlx->map.player_y - 1] != 'E'))
 	{
+		if (mlx->map.map[mlx->map.player_x][mlx->map.player_y - 1] != '1')
+			mlx->map.move_count++;
 		if (mlx->map.map[mlx->map.player_x][mlx->map.player_y - 1] == 'C')
 		{
 			(--mlx->map.collectible);
@@ -99,6 +104,8 @@ void	move_right(t_mlx *mlx)
 	if ((mlx->map.map[mlx->map.player_x][mlx->map.player_y + 1] != '1'
 		&& mlx->map.map[mlx->map.player_x][mlx->map.player_y + 1] != 'E'))
 	{
+		if (mlx->map.map[mlx->map.player_x][mlx->map.player_y + 1] != '1')
+			mlx->map.move_count++;
 		if (mlx->map.map[mlx->map.player_x][mlx->map.player_y + 1] == 'C')
 		{
 			(--mlx->map.collectible);

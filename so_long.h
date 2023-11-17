@@ -43,6 +43,7 @@ typedef struct mlx
 {
 	void	*mlx;
 	void	*mlx_window;
+	void	*win_ptr;
 	void	*exit;
 	void	*coin;
 	void	*play;
@@ -59,15 +60,15 @@ typedef struct mlx
 
 // -------------------Macros--------------------
 
-# define KEY_W 119		// 13 119
-# define KEY_S 115	 	// 1 115
-# define KEY_D 100	 	// 2 100
-# define KEY_A 97		// 0 97
-# define KEY_EXIT 65307	// 53 65307
-# define KEY_UP 65362	// 126 65362
-# define KEY_DOWN 65364	// 125 65364
-# define KEY_RIGHT 65363 // 124 65363
-# define KEY_LEFT 65361
+# define KEY_W 13	// 13 119
+# define KEY_S 1	 	// 1 115
+# define KEY_D 2	 	// 2 100
+# define KEY_A 0		// 0 97
+# define KEY_EXIT 53	// 53 65307
+# define KEY_UP 126	// 126 65362
+# define KEY_DOWN 125	// 125 65364
+# define KEY_RIGHT 124 // 124 65363
+# define KEY_LEFT 123 // 65361
 # define KEY_PRESS 2
 // -------------------Macros--------------------
 

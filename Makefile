@@ -27,8 +27,10 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-# macos -->	$(CC) $(CFLAGS) $(OBJ) -lmlx -lmlx -framework OpenGL -framework AppKit -o $(NAME)
-	$(CC) $(CFLAGS) $(OBJ) -Lmlx_linux -lmlx_Linux -L/usr/lib -Imlx_linux -lXext -lX11 -lm -lz -o $(NAME)
+# macos -->	
+	$(CC) $(CFLAGS) $(OBJ) -lmlx -lmlx -framework OpenGL -framework AppKit -o $(NAME)
+# linux -->
+#	$(CC) $(CFLAGS) $(OBJ) -Lmlx_linux -lmlx_Linux -L/usr/lib -Imlx_linux -lXext -lX11 -lm -lz -o $(NAME)
 clean:
 	rm -rf $(OBJ)
 
