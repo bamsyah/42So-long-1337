@@ -12,6 +12,16 @@
 
 #include "so_long.h"
 
+
+int	free_all(void *param)
+{
+	t_mlx *game;
+
+	game = (t_mlx *)param;
+	free(game->map.map);
+	exit(0);
+	return (1);
+}
 char	*map(int fd, t_map *map)
 {
 	char	*read_line;
@@ -53,12 +63,16 @@ int	main(int ac, char **av)
 		invalid_map();
 	check_name(av[1]);
 	line = map(fd, &window.map);
+	if (!line)
+		invalid_map();
 	ft_map(&window.map, line);
 	check_all(&window.map);
 	map_dimension(&window.map);
 	path_config(&window.map);
 	ft_window(&window, &window.map);
 	mlx_hook(window.mlx_window, 2, 0, key_press, &window);
+	mlx_hook(window.mlx_window, 17, 0, free_all, &window);
 	mlx_loop(window.mlx);
+	system("leaks so_long");
 }
 // linux --> mlx_hook(window.mlx_window, 2, 1L << 0, key_press, &window);

@@ -27,8 +27,8 @@ int	key_press(int key, t_mlx *mlx)
 		move_left(mlx);
 	else if (key == KEY_D)
 		move_right(mlx);
-	printf("Player x pos: %d\n", mlx->map.player_x);
-	printf("Player y pos: %d\n", mlx->map.player_y);
-	printf("Collectibles left: %d\n", mlx->map.collectible);
+	ft_printf("Player x pos: %d\n", mlx->map.player_x);
+	ft_printf("Player y pos: %d\n", mlx->map.player_y);
+	ft_printf("Collectibles left: %d\n", mlx->map.collectible);
 	return (0);
 }

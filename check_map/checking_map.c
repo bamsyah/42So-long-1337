@@ -29,16 +29,21 @@ void	check_newline(char *split)
 	int	i;
 
 	i = 0;
+	if (!split)
+	{
+		printf ("Error empty map\n");
+		exit (0);
+	}
 	if (split[i] == '\n')
 	{
-		ft_printf("Error\n there is a new line");
+		ft_printf("Error there is a new line\n");
 		exit (0);
 	}
 	while (split[i])
 	{
 		if (split[i] == '\n' && split[i + 1] == '\n')
 		{
-			ft_printf("Error\n there is a new line");
+			ft_printf("Error there is a new line\n");
 			exit (0);
 		}
 		i++;
