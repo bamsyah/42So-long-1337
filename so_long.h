@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 04:44:24 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/11/17 18:14:51 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/11/21 23:02:10 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,6 @@ typedef struct mlx
 	void	*wall;
 	void	*back;
 	void	*img;
-	char	*addr;
-	int		bits_per_pixel;
-	int		line_length;
-	int		endian;
 	t_map	map;
 }	t_mlx;
 // -----------------------Struct------------------------
