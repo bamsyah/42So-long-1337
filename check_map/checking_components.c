@@ -6,7 +6,7 @@
 /*   By: bamsyah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 21:03:47 by bamsyah           #+#    #+#             */
-/*   Updated: 2023/09/19 13:37:21 by bamsyah          ###   ########.fr       */
+/*   Updated: 2023/11/26 20:59:05 by bamsyah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,6 @@ void	collectible(char *player, t_map *map)
 		}
 		i++;
 	}
-	if (map->collectible == -1)
+	if (map->collectible == 0)
 		invalid_map();
 }
